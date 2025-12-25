@@ -1,17 +1,15 @@
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the second number: "))
-op = input("Enter an operator (+, -, *, /): ")
-
-if op == "+":
-    print(num1 + num2)
-elif op == "-":
-    print(num1 - num2)
-elif op == "*":
-    print(num1 * num2)
-elif op == "/":
-    if num2 == 0:
-        print("Error: Cannot divide by zero")
-    else:
-        print(num1 / num2)
+num= 6
+if num >0:
+    print('the number is positive')
+elif num <0:
+    print('the number is negative')
 else:
-    print("Invalid operator")
+    print('the number is zero')
+num = 5  # example value
+
+if num > 0:
+    print('The number is positive')
+elif num <0:
+    print('The number is negative')
+else:
+    print('The number is zero')
