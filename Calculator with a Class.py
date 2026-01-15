@@ -1,39 +1,34 @@
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
-operation = input("Choose an operation (+, -, *, /): ")
+class Calculator:
+    def add(self, a, b):
+        return a + b
 
-if operation == "+":
-    result = num1 + num2
-elif operation == "-":
-    result = num1 - num2
-elif operation == "*":
-    result = num1 * num2
-elif operation == "/":
-    result = num1 / num2
-else:
-    result = "Invalid operation"
+    def subtract(self, a, b):
+        return a - b
 
-print("Result:"), result
+    def multiply(self, a, b):
+        return a * b
+
+    def divide(self, a, b):
+        if b == 0:
+            return "Error: Division by zero"
+        return a / b
+calc = Calculator()
+
 while True:
-    num1 = float(input("Enter first number: "))
+    num1 = float(input("Enter first number: ")) 
     num2 = float(input("Enter second number: "))
-    operation = input("Choose an operation (+, -, *, /): ")
+    operation = input("Enter operation (+,-,*,/):")
 
-    if operation == "+":
-        print("Result:", num1 + num2)
-    elif operation == "-":
-        print("Result:", num1 - num2)
-    elif operation == "*":
-        print("Result:", num1 * num2)
-    elif operation == "/":
-        if num2 == 0:
-            print("Error: Cannot divide by zero")
-        else:
-            print("Result:", num1 / num2)
+    if operation == '+':
+        print(calc.add(num1, num2))
+    elif operation == '-':
+        print(calc.subtract(num1, num2))
+    elif operation == '*':
+        print(calc.multiply(num1, num2))
+    elif operation == '/':
+        print(calc.divide(num1, num2))
     else:
-        print("Invalid operation")
+        print("Invalid operation")  
 
-    again = input("Do you want to calculate again? (y/n): ")
-    if again.lower() != "y":
+    if input("Calculate again? (y/n): ").lower() != "y":
         break
-
