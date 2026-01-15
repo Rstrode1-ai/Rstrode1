@@ -3,15 +3,33 @@ num2 = float(input("Enter second number: "))
 operation = input("Choose an operation (+, -, *, /): ")
 
 if operation == "+":
-    print("Result:", calc.add(num1, num2))
+    result = num1 + num2
 elif operation == "-":
-    print("Result:", calc.subtract(num1, num2))
+    result = num1 - num2
 elif operation == "*":
-        print("Result:", calc.multiply(num1, num2))
+    result = num1 * num2
 elif operation == "/":
-    print("Result:", calc.divide(num1, num2))
+    result = num1 / num2
 else:
-    print("Invalid operation")
+    result = "Invalid operation"
 
-    input("Calculate again? (y/n): ").lower() != "y":
+print("Result:"), result
+
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+operation = input("Choose an operation (+, -, *, /): ")
+
+if operation == "+":
+        print("Result:", num1 + num2)
+elif operation == "-":
+        print("Result:", num1 - num2)
+elif operation == "*":
+        print("Result:", num1 * num2)
+elif operation == "/":
+        print("Result:", num1 / num2)
+else:
+        print("Invalid operation")
+again = input("Do you want to calculate again? (y/n): ")
+if again.lower() != "y":
     
+    break
